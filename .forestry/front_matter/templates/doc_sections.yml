@@ -1,0 +1,21 @@
+---
+label: Documentation Sections
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: root_folder
+    label: Root Folder
+    description: >-
+      The path under which the documentation pages will be generated. For
+      example, set to "/" to put all documentation pages at root, or set to
+      "/docs/" to put all documentation pages under "/docs/".
+    default: /docs/
+    config:
+      required: true
+  - type: list
+    name: sections
+    label: Sections
+    description: >-
+      The main sections of the documentation. Every item must be the URL slug
+      representing the section.

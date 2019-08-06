@@ -1,0 +1,43 @@
+---
+label: Post
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: The title of the post
+    config:
+      required: true
+  - type: text
+    name: subtitle
+    label: Subtitle
+    description: The text shown just below the post title.
+  - type: datetime
+    name: date
+    label: Date
+    config:
+      required: true
+  - type: file
+    name: thumb_img_path
+    label: Featured Image
+    description: The image shown in the blog feed.
+  - type: file
+    name: content_img_path
+    label: Alt Featured Image
+    description: The image shown in the header background in the single post.
+  - type: text
+    name: excerpt
+    label: Excerpt
+    description: The excerpt of the post displayed in the blog feed.
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: post
+    config:
+      required: true
+pages:
+  - posts/2018-01-15-function-of-design .md
+  - posts/2019-03-10-conf.md
+  - posts/2019-04-24-libris-theme.md
+  - posts/2019-05-27-community.md

@@ -1,0 +1,31 @@
+---
+label: Footer
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: content
+    label: Footer Content
+    description: The copyright text displayed in the footer.
+  - type: field_group_list
+    name: links
+    label: Links
+    description: A list of links displayed in the footer.
+    config:
+      labelField: text
+    fields:
+      - type: text
+        name: text
+        label: Link text
+      - type: text
+        name: url
+        label: URL
+      - type: boolean
+        name: new_window
+        label: Open in new window
+        default: true
+  - type: boolean
+    name: has_social
+    label: Enable Social Links
+    description: Display social links in the footer.
+    default: true

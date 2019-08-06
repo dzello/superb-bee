@@ -1,0 +1,51 @@
+---
+label: Showcase
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: The title of the page.
+    config:
+      required: true
+  - type: text
+    name: subtitle
+    label: Subtitle
+    description: The text shown just below the page title.
+  - type: file
+    name: img_path
+    label: Image
+    description: The image shown in the background of the page header.
+  - type: field_group_list
+    name: items
+    label: Items
+    description: Showcase items.
+    config:
+      labelField: title
+    fields:
+      - type: text
+        name: title
+        label: Title
+        description: The title of the item.
+      - type: text
+        name: subtitle
+        label: Subtitle
+        description: The subtitle of the item.
+      - type: file
+        name: preview_img
+        label: Preview Image
+        description: The preview image of the item.
+      - type: text
+        name: url
+        label: URL
+        description: The URL of the item.
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: showcase
+    config:
+      required: true
+pages:
+  - showcase.md

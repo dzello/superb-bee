@@ -1,0 +1,85 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: static/admin
+webhook_url: 'https://api.stackbit.com/project/5d49b81e20c81900114287ff/webhook/forestry'
+sections:
+  - type: document
+    label: Global Site Config
+    path: config.yaml
+    templates:
+      - config
+  - type: document
+    label: Author
+    path: data/author.json
+    templates:
+      - author
+  - type: document
+    label: Header
+    path: data/header.yml
+    templates:
+      - header
+  - type: document
+    label: Footer
+    path: data/footer.yml
+    templates:
+      - footer
+  - type: document
+    label: Social Links
+    path: data/social.json
+    templates:
+      - social
+  - type: document
+    label: Documentation Sections
+    path: data/doc_sections.yml
+    templates:
+      - doc_sections
+  - type: directory
+    path: content
+    match: '**/*'
+    exclude: '{_index.md,blog/_index.md,overview.md,showcase.md}'
+    label: Documentation Pages
+    create: all
+    templates:
+      - docs
+  - type: document
+    label: Home
+    path: content/_index.md
+    templates:
+      - home
+  - type: document
+    label: Blog
+    path: content/blog/_index.md
+    templates:
+      - blog
+  - type: document
+    label: Overview
+    path: content/overview.md
+    templates:
+      - overview
+  - type: document
+    label: Showcase
+    path: content/showcase.md
+    templates:
+      - showcase
+  - type: directory
+    path: content
+    match: '**/*'
+    exclude: '{posts/**,_index.md,blog/_index.md,overview.md,showcase.md}'
+    label: Page
+    create: all
+    templates:
+      - page
+  - type: directory
+    path: content/posts
+    match: '**/*'
+    label: Post
+    create: all
+    templates:
+      - post
+upload_dir: static/images
+public_path: /images
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ':filename:'
+version: '0.47'
